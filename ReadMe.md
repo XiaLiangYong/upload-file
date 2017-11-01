@@ -26,11 +26,23 @@ http://localhost:8080/upload/pluploadUpload?mch_id=XXX&time=XXX&nonce_str=XXX&si
 前端接入详情请查询：http://www.plupload.com/
 
 #api接口返回说明
-```{
+1. 失败返回
+```
+{
          "status": 103,
          "msg": "上传失败，因为文件是空的",
          "data": null
-   }
+}
+```
+2. 成功返回
+```
+{
+    "status": 0,
+    "msg": "success",
+    "data": {
+        "0": "/2017/11/1/jpg/b6d9efc2ec88403d96b85ee4b33c702a.jpg"
+    }
+}
 ```
 
 ###status状态说明
