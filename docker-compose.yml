@@ -1,0 +1,16 @@
+version: '2'
+services:
+    upload-file:
+        image: alibeibei/upload-file:latest
+        restart: always
+        container_name: upload-file
+        ports:
+            - "8080:8080"
+        volumes:
+            - /data/statics:/data/statics
+        environment:
+              UPLOAD_PATH: /data/statics
+              UPLOAD_MAX_FILE_SIZE: 20MB
+              UPLOAD_MAX_REQUEST_SIZE: 200MB
+              UPLOAD_FILE_EXT: jpg,jpeg,png,gif,mp4,wmv
+              UPLOADS_MCH_IDS: 10000:nicsdasdsdfdgdgdfg,100001:nisdfdfasdfdfsdfdf
